@@ -3,7 +3,8 @@
 	url = https://github.com/godotengine/godot-headers
 [submodule "OpenHMD"]
 	path = OpenHMD
-	url = https://github.com/OpenHMD/OpenHMD
+	url = https://github.com/thaytan/OpenHMD/
+	branch = rift-kalman-filter
 [submodule "hidapi"]
 	path = hidapi
 	url = https://github.com/OpenHMD/hidapi
