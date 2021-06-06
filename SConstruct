@@ -133,6 +133,7 @@ env.Append(CPPPATH=[openhmd_headers])
 
 openhmd_sources = [
     "fusion.c",
+    "exponential-filter.c",
     "omath.c",
     "matrices.c",
     "openhmd.c",
