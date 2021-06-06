@@ -125,6 +125,9 @@ env.Append(CFLAGS=["-DDRIVER_PSVR"])
 env.Append(CFLAGS=["-DDRIVER_WMR"])
 env.Append(CFLAGS=["-DDRIVER_VRTEK"])
 
+env.Append(CPPFLAGS=["-DHAVE_OPENCV=1"])
+env.ParseConfig('pkg-config --cflags --libs opencv')
+
 openhmd_headers = openhmd_path + "include/"
 env.Append(CPPPATH=[openhmd_headers])
 
@@ -151,9 +154,9 @@ openhmd_sources = [
     "drv_oculus_rift/rift-hmd-radio.c",
     "drv_oculus_rift/rift.c",
     "drv_oculus_rift/correspondence_search.c",
-    "drv_oculus_rift/rift-debug-draw.c",
     "drv_oculus_rift/rift-sensor.c",
     "drv_oculus_rift/rift-sensor-mt9v034.c",
+    "drv_oculus_rift/rift-sensor-opencv.cpp",
     "drv_oculus_rift/led_search.c",
     "drv_oculus_rift/rift-sensor-esp570.c",
     "drv_oculus_rift/rift-sensor-pose-helper.c",
