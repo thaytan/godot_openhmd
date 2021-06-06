@@ -126,7 +126,7 @@ env.Append(CFLAGS=["-DDRIVER_WMR"])
 env.Append(CFLAGS=["-DDRIVER_VRTEK"])
 
 env.Append(CPPFLAGS=["-DHAVE_OPENCV=1"])
-env.ParseConfig('pkg-config --cflags --libs opencv')
+env.ParseConfig('pkg-config --cflags --libs opencv4')
 
 openhmd_headers = openhmd_path + "include/"
 env.Append(CPPPATH=[openhmd_headers])
